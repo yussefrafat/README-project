@@ -5,7 +5,7 @@ function generateMarkdown(data){
   [![Github license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/${data.UserName}/${data.Title})
 
   # Descrption
-  ${data.Descrpiton}
+  ${data.Description}
 
   # Table of Contents
 

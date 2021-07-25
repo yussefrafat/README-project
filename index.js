@@ -31,12 +31,17 @@ const questions = [
     },
     {
         type: "input",
-        message: "What is this app used for?",
-        name: "License",
+        message: "What did you use to build this app",
+        name: "Usage",
     },
     {
         type: "input",
         message: "What license was used for this README?",
+        name: "License",
+    },
+    {
+        type: "input",
+        message: "Who made the project?",
         name: "Contributor",
     },
     {
@@ -49,7 +54,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     
-    fs.writeFile("./demo/"+fileName, data, function(err) {
+    fs.writeFile("./readme-guide.md"+fileName, data, function(err) {
         if (err) {
             return console.log(err);
         }
@@ -61,7 +66,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(data) {
-        writeToFile("DemoREADME.md", generatorMarkdown(data))
+        writeToFile("README.md", generatorMarkdown(data))
     })
 }
 
